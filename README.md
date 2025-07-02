@@ -1,6 +1,6 @@
 # AMQP Tools
 
-This repository hosts some tools we use for debugging, testing and playing with AMQP brokers. Currently these are mainly used for interacting with [https://www.entsoe.eu/ecco-sp/](ECCo SP) brokers.
+This repository hosts some tools we use for debugging, testing and playing with AMQP brokers. Currently these are mainly used for interacting with [ECCo SP](https://www.entsoe.eu/ecco-sp/) brokers.
 
 ## List of Tools
 
