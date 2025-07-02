@@ -4,7 +4,7 @@ This repository hosts some tools we use for debugging, testing and playing with 
 
 ## List of Tools
 
-### `proton_consumer.py`
+### proton_consumer.py
 
 Connects to the internal ECP broker at the given address:port tuple and consumes messages from the given queue, writing each message's body to disk.
 
@@ -34,7 +34,7 @@ options:
                         Path of directory to write messages to. If empty, the current directory will be used.
 ```
 
-### `proton_sender.py`
+### proton_sender.py
 
 Connects to the internal ECP broker at the given address:port tuple and sends the given file to the given recipient.
 
@@ -42,4 +42,23 @@ In the following example invocation the script connects to the broker at 10.2.2.
 
 ```sh
 $ python proton_sender.py -a 10.2.2.12 -r ep2 -f /tmp/2MiB.dat
+```
+
+Use the `-h/--help` flag for a more in-depth documentation of the available flags:
+
+```sh
+$ python proton_sender.py -h
+usage: proton_sender.py [-h] [-a ADDRESS] [-p PORT] [-q QUEUE] [-r RECEIVER_CODE] [-f FILE]
+
+ECP AMQP consumer
+
+options:
+  -h, --help            show this help message and exit
+  -a, --address ADDRESS
+                        IP address to connect to
+  -p, --port PORT       TCP port to connect to
+  -q, --queue QUEUE     Queue to consume from broker
+  -r, --receiver-code RECEIVER_CODE
+                        ECP endpoint code of the receiver
+  -f, --file FILE       file to read message body from
 ```
